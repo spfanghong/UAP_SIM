@@ -1,0 +1,10 @@
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\bin\Debug\UAP业务模拟器.exe.config
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\bin\Debug\UAP业务模拟器.exe
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\bin\Debug\UAP业务模拟器.pdb
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\obj\Debug\UAP_SIM.frmMain.resources
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\obj\Debug\UAP_SIM.Properties.Resources.resources
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\obj\Debug\UAP_SIM.csproj.GenerateResource.Cache
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\obj\Debug\UAP业务模拟器.exe
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\obj\Debug\UAP业务模拟器.pdb
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\obj\Debug\UAP_SIM.AboutBox.resources
+E:\self\UAP_SIM\APP\UAP_SIM\UAP_SIM\obj\Debug\UAP_SIM.csprojResolveAssemblyReference.cache

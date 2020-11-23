@@ -1,0 +1,2 @@
+@@TABLE_UAP_SIM.sql
+@@QTSDXGL.sql

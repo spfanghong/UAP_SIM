@@ -1,0 +1,459 @@
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem 调用举例 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem Create_All_object.bat es_dba change_on_install shine143 ET_WF /home/oracle/9i/oradata/ora64/  >create_all_ET_WF.log 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>call Create_TableSpace_pub.bat SYS sywg1234 ORAFANG UAP_SIM F:\oradata\orafang\ 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem 下面将开始创建表空间 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>SQLPLUS SYS/sywg1234@ORAFANG as sysdba @tablespace\create_tbs_pub.sql UAP_SIM F:\oradata\orafang\  0<nul 
+
+SQL*Plus: Release 10.2.0.1.0 - Production on 星期一 12月 23 17:37:57 2019
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+连接到: 
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+原值	8:     EXECUTE IMMEDIATE 'CREATE TABLESPACE TBS_UAP_SIM NOLOGGING DATAFILE ''&2.TBS_UAP_SIM.ORA'' SIZE 20M REUSE AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED EXTENT MANAGEMENT LOCAL UNIFORM SIZE 256K SEGMENT SPACE MANAGEMENT AUTO';
+新值	8:     EXECUTE IMMEDIATE 'CREATE TABLESPACE TBS_UAP_SIM NOLOGGING DATAFILE ''F:\oradata\orafang\TBS_UAP_SIM.ORA'' SIZE 20M REUSE AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED EXTENT MANAGEMENT LOCAL UNIFORM SIZE 256K SEGMENT SPACE MANAGEMENT AUTO';
+
+PL/SQL 过程已成功完成。
+
+SQL> 从 Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options 断开
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>call Create_User_pub.bat SYS sywg1234 ORAFANG UAP_SIM 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem 下面将创建用户 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>SQLPLUS SYS/sywg1234@ORAFANG as sysdba @user\create_user_pub.sql UAP_SIM  0<nul 
+
+SQL*Plus: Release 10.2.0.1.0 - Production on 星期一 12月 23 17:38:00 2019
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+连接到: 
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+
+PL/SQL 过程已成功完成。
+
+
+用户已创建。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+
+授权成功。
+
+SQL> 从 Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options 断开
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>call Create_Table_pub.bat SYS sywg1234 ORAFANG UAP_SIM 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem 下面将开始创建表 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>sqlplus UAP_SIM/UAP_SIM@ORAFANG @Table\Create_Table_UAP_SIM.sql  0<nul 
+
+SQL*Plus: Release 10.2.0.1.0 - Production on 星期一 12月 23 17:38:02 2019
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+连接到: 
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+drop table UAP_SIM.CFG_CS cascade constraints
+                   *
+第 1 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+drop table UAP_SIM.CFG_DICT cascade constraints
+                   *
+第 1 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+drop table UAP_SIM.CFG_DLJG cascade constraints
+                   *
+第 1 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+drop table UAP_SIM.CFG_JKINFO cascade constraints
+                   *
+第 1 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+drop table UAP_SIM.QTHHR cascade constraints
+                   *
+第 1 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+drop table UAP_SIM.QTSYXX cascade constraints
+                   *
+第 1 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+drop index UAP_SIM."idx_QTYMTZL_02"
+                   *
+第 1 行出现错误:
+ORA-01418: 指定的索引不存在
+
+
+drop index UAP_SIM."idx_QTYMTZL_01"
+                   *
+第 1 行出现错误:
+ORA-01418: 指定的索引不存在
+
+
+drop table UAP_SIM.QTYMTZL cascade constraints
+                   *
+第 1 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+drop index UAP_SIM.IDX_QTZHZL_01
+                   *
+第 1 行出现错误:
+ORA-01418: 指定的索引不存在
+
+
+drop table UAP_SIM.QTZQZHZL cascade constraints
+                   *
+第 1 行出现错误:
+ORA-00942: 表或视图不存在
+
+
+drop sequence UAP_SIM.SEQ_SHZQZH
+                      *
+第 1 行出现错误:
+ORA-02289: 序列不存在
+
+
+drop sequence UAP_SIM.SEQ_SZZQZH
+                      *
+第 1 行出现错误:
+ORA-02289: 序列不存在
+
+
+drop sequence UAP_SIM.SEQ_YMTH
+                      *
+第 1 行出现错误:
+ORA-02289: 序列不存在
+
+
+
+序列已创建。
+
+
+序列已创建。
+
+
+序列已创建。
+
+
+表已创建。
+
+
+表已创建。
+
+
+表已创建。
+
+
+表已创建。
+
+
+表已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+表已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+表已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+索引已创建。
+
+
+索引已创建。
+
+
+表已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+注释已创建。
+
+
+索引已创建。
+
+SQL> 从 Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options 断开
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>call Create_Proc_pub.bat SYS sywg1234 ORAFANG UAP_SIM 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem 下面开始创建存储过程和触发器 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>sqlplus UAP_SIM/UAP_SIM@ORAFANG @Proc\Create_proc_UAP_SIM.sql  0<nul 
+
+SQL*Plus: Release 10.2.0.1.0 - Production on 星期一 12月 23 17:38:02 2019
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+连接到: 
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+
+函数已创建。
+
+
+函数已创建。
+
+
+函数已创建。
+
+
+过程已创建。
+
+
+过程已创建。
+
+
+过程已创建。
+
+
+过程已创建。
+
+
+过程已创建。
+
+
+过程已创建。
+
+SP2-0310: 无法打开文件 "Proc\UAPSRV_09.SQL"
+SP2-0310: 无法打开文件 "Proc\UAPSRV_11.SQL"
+SQL> 从 Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options 断开
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem 创建存储过程和触发器结束 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>call Create_Init_pub.bat SYS sywg1234 ORAFANG UAP_SIM 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem 下面开始初始化数据 
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>sqlplus UAP_SIM/UAP_SIM@ORAFANG @Init\Create_Init_UAP_SIM.sql  0<nul 
+
+SQL*Plus: Release 10.2.0.1.0 - Production on 星期一 12月 23 17:38:03 2019
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+
+连接到: 
+Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options
+
+
+表被截断。
+
+
+已创建483行。
+
+
+已创建101行。
+
+
+提交完成。
+
+
+提交完成。
+
+
+已创建1109行。
+
+
+提交完成。
+
+SQL> 从 Oracle Database 10g Enterprise Edition Release 10.2.0.1.0 - Production
+With the Partitioning, OLAP and Data Mining options 断开
+
+E:\self\UAP_SIM\DB\script\UAP_SIM\UAP_SIM>rem
